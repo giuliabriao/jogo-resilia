@@ -77,7 +77,7 @@ function whoToCall(){
 }
 
 function chooseAriel1(){
-    image(lockedImg, "lockedImg");
+    image(lockedDoorImg, "lockedDoorImg");
     textChoices("textChooseAriel1", `Vocês adentram a despensa quando de repente a porta atrás de vocês se fecha, 
     tentar abri-la é inútil pois está trancada! Do lado de fora, ouvem-se gritos. Ariel tem a brilhante ideia 
     de vocês dois tentarem arrombar a porta. Os gritos estão ficando cada vez mais altos e aterrorizantes.`)
