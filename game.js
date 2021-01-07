@@ -88,7 +88,7 @@ function chooseAriel2(){
     image(carnageImg, "carnageImg");
     textChoices("textChooseAriel2", `Finalmente conseguem sair e quando chegam na sala, uma carnificina. Vocês paralisam de medo mas é tarde demais... 
     O serial killer matou todo mundo... <br><br> <b>O que você faz?</b>`);
-    createButtons("Correm que nem louca pra bem longe", "runAway", "Bola um plano com Ariel para capturar ou se possível matar o serial killer", "planToKill");
+    createButtons("Corre que nem louca pra bem longe", "runAway", "Bola um plano com Ariel para capturar ou se possível matar o serial killer", "planToKill");
 }
 
 function runAway(){
@@ -101,6 +101,13 @@ function runAway(){
 function winning1(){
     youWin();
     textChoices("textWinning1", `PARABENS! VOCÊ SOBREVIVEU! <br><br>Pena que seus amigos não tiveram a mesma sorte... R.I.P.`);
+    playAgain();
+}
+
+function planToKill(){
+    clearImg()
+    textChoices("textplanToKill", `Vocês demoraram muito pensando e de repente fica tudo escuro... <br><br> Você morreu, que pena!`);
+    death();
     playAgain();
 }
 
