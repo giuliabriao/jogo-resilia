@@ -73,7 +73,7 @@ function whoToCall(){
     image(doubtImg, "doubtImg");
     textChoices("textWhoToCall", `Ta, dessa vez você estava com medo, mas não se deixou levar. Como Diana tava tensa e Fred quase desmaiando, 
     você se oferece pra ir ver se não era o vento, ou algo assim.<br><br> Quem você chama pra ir conferir o barulho contigo?`);
-    createButtons("Ariel, o cara de mente afiada porém fisicamente lento", "chooseAriel1", "Úrsula, a popular que faz boas gambiarras porém é distraída", "chooseUrsula");
+    createButtons("Ariel, o cara de mente afiada porém fisicamente lento", "chooseAriel1", "Úrsula, a popular que faz boas gambiarras porém é distraída", "chooseUrsula1");
 }
 
 function chooseAriel1(){
@@ -101,5 +101,44 @@ function runAway(){
 function winning1(){
     youWin();
     textChoices("textWinning1", `PARABENS! VOCÊ SOBREVIVEU! <br><br>Pena que seus amigos não tiveram a mesma sorte... R.I.P.`);
+    playAgain();
+}
+
+function chooseUrsula1(){
+    image(clipImg, "clipImg");
+    textChoices("textChooseUrsula1", `Vocês vão até o quartinho dos fundos. A porta se fecha atrás de vocês e não quer mais abrir, 
+    mas Úrsula tem a genial ideia de usar seus grampos de cabelo para abrir a porta. E não é que deu certo?`);
+    continuarStory("continueChooseUrsula1", chooseUrsula2);
+}
+
+function chooseUrsula2(){
+    image(serialKillerImg, "serialKillerImg");
+    textChoices("textChooseUrsula2", `Vocês saem de fininho em direção a sala. Encontram uma cena aterrorizante: um homem imenso, mascarado e 
+    com um machadinha se aproximava da Diana. Você rapidamente pensa em como deter o serial killer. <b>O que você faz?</b>`);
+    createButtons("Pega uma faca na cozinha", "chooseKnife", "Pegar uma chaleira com água fervente", "chooseKettle1");
+}
+
+function chooseKnife(){
+    image(deathSKImg, "deathSKImg");
+    textChoices("textChooseKnife", `Devargarinho você se aproxima do serial killer e com um só golpe apunhala seu pescoço, que o faz agonizar e cair sangrando litros no chão.`);
+    continuarStory("continueChooseKnife1", winning2);
+}
+
+function winning2(){
+    youWin();
+    textChoices("textWinning2", `PARABÉNS, VOCÊ SALVOU O DIA E AINDA GANHOU O CORAÇÃO DA MOÇA! <br><br>(só depois que ela se recuperar desse estresse pós-traumático)`);
+    playAgain();    
+}
+
+function chooseKettle1(){
+    image(kettleImg, "kettleImg");
+    textChoices("textChooseKettle1",`Você prontamente chega de fininho e joga água fervente em cima do serial killer!`)
+    continuarStory("continueChooseKettle1", chooseKettle2);
+}
+
+function chooseKettle2(){
+    clearImg();
+    textChoices("textChooseKettle2",`..mas ele é o próprio demônio e a água não faz nada além de cócegas. Ele não reage de outra forma a não ser te matando!`)
+    death();
     playAgain();
 }

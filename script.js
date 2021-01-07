@@ -61,7 +61,7 @@ function continuarStory(id, funcao) {
     var continuar = document.createElement("button");
     continuar.setAttribute("id", id);
     continuar.innerText = "Continuar...";
-    continuar.onclick = funcao
+    continuar. addEventListener("click", funcao)
     document.getElementById("buttons").appendChild(continuar);
 }
 

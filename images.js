@@ -9,3 +9,7 @@ var lockedImg = "./imagens/locked.jpg";
 var carnageImg = "./imagens/carnage.png";
 var policeImg = "./imagens/police.jpg";
 var youWinImg = "./imagens/youWin.jpg";
+var clipImg = "./imagens/clip.jpg";
+var serialKillerImg = "./imagens/serialKiller.png";
+var deathSKImg = "./imagens/deathSK.png";
+var kettleImg = "./imagens/kettle.jpg";
