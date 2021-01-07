@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Viva ou morra tentando!</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1 id = "h1" class="head1">ACAMPAMENTO DE VERÃO</h1>
+    </header>
+
+    <main>
+    <div id="intro">
+        <h3>O ano é 1975.
+            <br>
+            Você e seus amigos resolvem ir para um acampamento de férias no verão de Massachusetts.
+            <br><br>
+            Malas e mochilões a postos, vocês seguem rumo à aventura, ansioses pelo calor, mosquitos e marshmallows com
+            refrigerantes à beira da fogueira. Numa dessas confraternizações, um de seus colegas conta sobre uma possível 
+            lenda de que há um serial killer a solta e que ele adora invadir acampamentos de adolescentes. 
+            <br><br>
+            Você ri, não acredita e segue o baile.
+        </h3>
+    </div>
+
+    <div id="radioButtons">
+        <p>Quer com ou sem emoção?</p>
+        <input id="rb1" name="loadImg" type="radio" value="yes">Com emoção</input>
+        <br>
+        <input id="rb2" name="loadImg" type="radio" value="no">Sem emoção</input>
+    </div>
+
+    <div id="button">
+        <button id="initialButton" onclick="clickButton()"> Clique aqui para iniciar</button>
+    </div>
+
+    <div id="textChoices">
+        <p id="text" class="death"></p>
+    </div>
+
+    <div id="buttons"></div>
+
+    <div id="campImg">
+        <img src="./imagens/acampamento.jpg">
+    </div>
+
+    <div id="divImg"></div>
+
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="./game.js"></script>
+</body>
+</html>

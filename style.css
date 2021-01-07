@@ -1,0 +1,118 @@
+body{
+    background: #8d8997;
+}
+
+h1{    
+    color: #282b31;
+    text-align: center;
+    font-family: fantasy;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    font-size: 50px;
+}
+
+h3{
+    color: white;
+    text-align: center;
+    width: 60%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#radioButtons{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    font-size: 16px;
+    color: white;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#campImg{
+    display: flex;
+    justify-content: center; 
+}
+
+#divImg{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    
+    width: auto;
+    height: auto;    
+}
+
+#knifeImg{
+    width: 700px;
+    height: 300px;
+}
+
+#campFireImg{
+    width: 1000px;
+    height: 400px;
+}
+
+#deerImg{
+    width: 1000px;
+    height: 400px;
+}
+
+#hugImg{
+    width: 900px;
+    height: 350px;
+}
+
+#cabinImg{
+    width: 1000px;
+    height: 400px;
+}
+
+#doubtImg{
+    width: 900px;
+    height: 300px;
+}
+
+#lockedImg{
+    width: 900px;
+    height: 400px;
+}
+
+#carnageImg{
+    width: 800px;
+    height: 400px;
+}
+
+#policeImg{
+    width: 800px;
+    height: 400px;
+}
+
+#youWinImg{
+    width: 700px;
+    height: 500px;
+}
+
+#textChoices{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 18px;
+
+}

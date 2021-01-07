@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Viva ou morra tentando!</title>
+</head>
+
+<body>
+    <header>
+        <h1>ACAMPAMENTO DE VERÃO</h1>
+    </header>
+
+    <main>
+    <div>
+        <h3>O ano é 1975. <br>Você e seus amigos resolvem ir para um acampamento de férias no verão de
+            Massachusetts.<br><br>
+            Malas e mochilões a postos, vocês seguem rumo à aventura, ansioses pelo calor, mosquitos e marshmallows com
+            refrigerantes à beira da fogueira.
+            Numa dessas confraternizações, um de seus colegas conta sobre uma possível lenda de que há um serial killer
+            a solta e que ele adora
+            invadir acampamentos de adolescentes. <br><br>Você ri, não acredita e segue o baile.
+            <br>Clique no botão para iniciar.
+        </h3>
+    </div>
+
+        <div class="botao">
+            <button onclick="iniciaJogoJoana()"> Joana, a atleta mais braba da escola.</button>
+        </div>
+
+        <div class="imgAcampamento">
+            <img src="imagens/acampamento.jpg">
+        </div>
+
+
+    </main>
+
+    <script>
+
+        function iniciaJogoJoana() {
+            var nome = "Joana";
+            var confirmarJoana = confirm(`A ${nome} tem alta capacidade física, é habilidosa com objetos no geral, mas seu senso de liderança faz ela dar a cara a tapa com muita facilidade.\n\n Deseja escolhe-la? Aperte OK se sim e Cancelar se não.`);
+
+            if (confirmarJoana == true) {
+                historiaJoana();
+            }
+        }
+
+        function historiaJoana() {
+            var pegarFaca = prompt("Voce está correndo pelos arredores do acampamento quando vê um belíssimo exemplar de uma faca novinha no chão. \n\n O que você faz? Digite 1 para pegar a faca \n Digite 0 para deixa-la no chão mesmo.");
+
+            if (validarEscolhaUsuario(pegarFaca) == false) {
+                historiaJoana()
+            }
+
+            if (pegarFaca == 1) {
+                historiaJoanaP1();
+            } else if (pegarFaca == 0) {
+                historiaJoanaP2();
+            }
+        }
+
+        function historiaJoanaP1() {
+            alert("Você leva a faca pro seu dormitório para limpar e analisar. Tem a sensação de estar sendo observada, mas acaba deixando isso pra lá.");
+            alert("Teus amigos acharam maneiro e de muita sorte ter encontrado um objeto tão raro. Mais tarde naquele dia, vocês vão confraternizar em volta da fogueira.");
+            alert("De repente vocês escutam um barulho estranho na mata. Todos com medo mas, como você é destemida, resolve ir ver o que é. O vulto vai ficando mais próximo, mais próximo e quando vê era um filhote de veado a espreita. Você volta pra fogueira.");
+
+            var treinar = prompt("Depois de um tempo, o pessoal achou melhor ficar papeando dentro do dormitório porque fora tinham mosquitos demais. \n\n O que você faz? \n Digite 1 para ir treinar porque tem um importante campeonato regional semana que vem e você precisa estar em forma \n Digite 0 para ir junto da galera.");
+
+            if (validarEscolhaUsuario(treinar) == false) {
+                historiaJoanaP1()
+            }
+
+            if (treinar == 1) {
+                alert("No seu treino all by yourself, mega concentrada, você ouve um barulho e vê denovo um vulto mas deixa pra lá porque deve ser o Bambi mais um vez.");
+                alert("Silêncio total. Você se vê caída na chão. Algo quente escorre da sua testa. O tal serial killer que você não deu bola te matou primeiro por ter roubado a faca dele.");
+                morreu();
+            } else if (treinar == 0) {
+                historiaJoanaP2_2();
+            }
+        }
+
+        function historiaJoanaP2() {
+            alert("Você vai para o dormitório tomar banho e se preparar pra confraternização na fogueira.");
+            alert("As histórias de terror tão comendo soltas, você não liga, acha até graça. mas vê Diana morrendo de medo. Como você é a fim dela, chega mais perto para abraça-la.");
+            alert("Depois de um tempo, o pessoal achou melhor ficar papeando dentro do dormitório porque fora tinham mosquitos demais.")
+            historiaJoanaP2_2();
+        }
+
+        function historiaJoanaP2_2() {
+            alert("Você não deixa de reparar mais uma vez o quanto aquele dormitório parecia na verdade uma casa! Tinha 3 banheiros, varios quartos, uma cozinha imensa, sala... Poderia morar ali facilmente.");
+            alert("Enquanto o povo conversava, ria ou morria de medo na sala, um barulho de porta fechando não passou desapercebido.");
+            alert("Ta, dessa vez você estava com medo, mas não se deixou levar. Como Diana tava tensa e Fred quase desmaiando, você se oferece pra ir ver se não era o vento, ou algo assim.");
+
+            var ursulaOuAriel = prompt("Quem você escolhe pra ir conferir contigo? \n\n Digite 1 para Ariel \n Digite 0 para Úrsula");
+
+            if (validarEscolhaUsuario(ursulaOuAriel) == false) {
+                historiaJoanaP2_2()
+            }
+
+            if (ursulaOuAriel == 1) {
+                joanaArielP1();
+            } else if (ursulaOuAriel == 0) {
+                alert("Vocês vão até o quartinho dos fundos. A porta se fecha atrás de vocês e não quer mais abrir, mas Úrsula tem a genial ideia de usar seus grampos de cabelo para abrir a porta. E não é que deu certo?");
+                alert("Vocês saem de fininho em direção a sala. Encontram uma cena aterrorizante: um homem imenso, mascarado, com uma peixeira se aproximava da Diana. Por que ela estava sozinha?")
+                joanaUrsula();
+            }
+        }
+
+        function joanaUrsula() {
+            var atacarSK = prompt("Você rapidamente pensa em como deter o serial killer. O que você faz? \n\n Digite 1 para pegar uma faca na cozinha \n Digite 0 para pegar a água fervente numa chaleira");
+
+            if (validarEscolhaUsuario(atacarSK) == false) {
+                joanaUrsula()
+            }
+
+            if (atacarSK == 1) {
+                alert("Devargarinho você se aproxima do serial killer e com um só golpe apunhala seu pescoço, que o faz agonizar e cair sangrando litros no chão.");
+                alert("PARABÉNS, VOCÊ SALVOU O DIA E AINDA GANHOU O CORAÇÃO DA MOÇA! (só depois que ela se recuperar desse estresse pós-traumático")
+            } else if (atacarSK == 0) {
+                alert("Você prontamente chega de fininho e joga água fervente em cima do serial killer!");
+                alert("...mas ele é o próprio demônio e a água não faz nada além de cócegas. Ele não reage de outra forma a não ser te matando.");
+                morreu();
+            }
+        }
+
+        function joanaArielP1() {
+            alert("Vocês adentram a despensa quando de repente a porta atrás de vocês se fecha, tentar abri-la é inútil pois está trancada! Do lado de fora, ouvem-se gritos.")
+            alert("Ariel tem a brilhante ideia de vocês dois tentarem arrombar a porta. Os gritos estão ficando cada vez mais altos e aterrorizantes.");
+            alert("Finalmente conseguem sair e quando chegam na sala, uma carnificina. Vocês paralisam de medo mas é tarde demais... O serial killer matou todo mundo... ");
+
+            var correrOuFicar = prompt("O que você faz? \n\n Digite 1 para correr que nem louca pra bem longe \n Digite 0 para bolar um plano com Ariel para capturar ou se possível matar o serial killer.");
+
+            if (validarEscolhaUsuario(correrOuFicar) == false) {
+                joanaArielP1()
+            }
+
+            if (correrOuFicar == 1) {
+                joanaArielP2();
+            } else if (correrOuFicar == 0) {
+                alert("Vocês demoraram muito pensando e de repente fica tudo escuro...");
+                morreu()
+            }
+        }
+
+        function joanaArielP2() {
+            alert("Você e Ariel se salvam correndo pra bem longe, um carro de patrulha da polícia estava passando bem na hora. Vocês pedem ajuda, eles chegam ao local, capturam o serial killer e vocês salvam o dia.");
+            alert("PARABENS! VOCÊ SOBREVIVEU! Pena que seus amigos não tiveram a mesma sorte... R.I.P.")
+        }
+
+        function morreu() {
+            var morreu = confirm("Você morreu! Jogar denovo?");
+            if (morreu == true) {
+                historiaJoana();
+            }
+        }
+
+        function validarEscolhaUsuario(escolha) {
+            if (escolha == 0 || escolha == 1 || escolha == null){
+                return true
+            }
+
+            alert("Você deve escolher 0 ou 1")
+            return false
+        }
+
+    </script>
+
+</body>
+</html>
