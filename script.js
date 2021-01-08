@@ -51,6 +51,11 @@ function image(varImg, id) {                                  // Adiciona imagen
         imgTag.setAttribute("id", id);
     
         document.getElementById("divImg").appendChild(imgTag);      
+    }else{
+        let texto = document.getElementById("text");
+        texto.style.fontFamily = "Arial, Helvetica, sans-serif"
+        let title = document.getElementById("h1");
+        title.style.fontFamily = "Times, Serif";
     }
 }
 
