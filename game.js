@@ -33,7 +33,6 @@ function train1() {
     textChoices("textTrain1", `No seu treino all by yourself, mega concentrada, 
     você ouve um barulho e vê denovo um vulto mas deixa pra lá porque 
     deve ser o Bambi mais um vez.`);
-
     continuarStory("continueTrain1", train2)
 }
 
@@ -44,7 +43,6 @@ function train2() {
     te matou primeiro por ter roubado a faca dele.`);
     death();
     playAgain();
-
 }
 
 function leaveKnife1(){
