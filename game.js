@@ -1,6 +1,6 @@
 function startGameImg() {
     resetLayout();
-    image(knifeImg, "knifeImg")
+    image(knifeImg, "knifeImg");
     textChoices(
         "textStartGameImg", `Olá e bem vinda ao acampamento! <br><br> <b>Você é Joana</b>, a atleta de sua escola, com alta capacidade física, 
         habilidosa com objetos no geral, mas seu senso de liderança te faz dar a cara a tapa com muita facilidade.

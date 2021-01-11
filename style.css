@@ -1,5 +1,6 @@
 body{
-    background: #8d8997;
+    background-color: #8d8997;
+    
 }
 
 h1{    
@@ -47,6 +48,8 @@ h3{
 }
 
 
+
+
 #campImg{
     display: flex;
     justify-content: center; 
@@ -68,7 +71,7 @@ h3{
 
 #campFireImg{
     width: 1000px;
-    height: 400px;
+     height: 400px;
 }
 
 #deerImg{
@@ -109,6 +112,7 @@ h3{
 #youWinImg{
     width: 700px;
     height: 500px;
+    size
 }
 
 #kettleImg{
@@ -126,5 +130,15 @@ h3{
     margin-right: auto;
     color: white;
     font-size: 18px;
+}
 
+#divMusic{
+    display: flex;
+    justify-content: center;
+}
+
+#music{
+    width: 200px;
+    height: 50px;
+    color: black;
 }

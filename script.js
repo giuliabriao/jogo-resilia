@@ -7,11 +7,12 @@ function initialButton() {                                      // Botão inicia
 
     if (rb1.checked) {
         withEmotion = true;
+        music();
     } else if (rb2.checked) {
         withEmotion = false;
     }
 
-    removeToStart();
+    removeToStart();    
 }
 
 function textChoices(className, text) {                       // Cria os textos dinamicamente
@@ -50,7 +51,10 @@ function image(varImg, id) {                                  // Adiciona imagen
         var imgTag = createImage(varImg);
         imgTag.setAttribute("id", id);
     
-        document.getElementById("divImg").appendChild(imgTag);      
+
+        let divImg = document.getElementById("divImg")
+        divImg.appendChild(imgTag);
+              
     }else{
         let texto = document.getElementById("text");
         texto.style.fontFamily = "Arial, Helvetica, sans-serif"
@@ -127,4 +131,17 @@ function playAgain() {                                       //Cria um botão di
     playAgain.innerText = "Jogar denovo!";
     playAgain.addEventListener("click", startGameImg)
     document.getElementById("buttons").appendChild(playAgain);
+}
+
+function music(){
+
+        let music = document.createElement("audio");
+        music.setAttribute("controls", "");
+        music.setAttribute("id", "music");
+        music.setAttribute("src", "./music/tense_music.mp3");
+        music.setAttribute("loop", "true");
+        music.setAttribute("autoplay", "true")
+        //music.setAttribute("hidden", "false");
+        let divMusic = document.getElementById("divMusic")
+        divMusic.appendChild(music);
 }
