@@ -1,6 +1,5 @@
 body{
     background-color: #8d8997;
-    
 }
 
 h1{    
@@ -24,6 +23,18 @@ h3{
     margin-right: auto;
 }
 
+.botaoStyle{
+    font-family: 'Oswald', sans-serif;
+    color: #282b31;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.botaoStyle:hover{
+    background-color: grey;
+    color: white;
+}
+
 #radioButtons{
     display: flex;
     align-items: center;
@@ -36,19 +47,18 @@ h3{
     display: flex;
     justify-content: center;
     margin-top: 1%;
+    height: 5vh;
 }
 
 #buttons{
     display: flex;
     justify-content: space-evenly;
+    height: 5vh;
 }
 
 #text{
     font-family: 'Oswald', sans-serif;
 }
-
-
-
 
 #campImg{
     display: flex;
@@ -135,6 +145,7 @@ h3{
 #divMusic{
     display: flex;
     justify-content: center;
+    ;
 }
 
 #music{

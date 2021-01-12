@@ -22,9 +22,10 @@ function textChoices(className, text) {                       // Cria os textos 
 }
 
 function createButtons(opt1, funcName1, opt2, funcName2) {    // Cria botões dinamicamente a cada escolha diferente
-    document.querySelector("#buttons").innerHTML =
-        `<button onclick="${funcName1}()">${opt1}</button>
-        <button onclick="${funcName2}()">${opt2}</button>`
+    let botoes = document.querySelector("#buttons")
+    botoes.innerHTML =
+        `<button id="btn" class="botaoStyle" onclick="${funcName1}()">${opt1}</button>
+        <button id="btn" class="botaoStyle" onclick="${funcName2}()">${opt2}</button>`
 }
 
 function continuarStory(id, funcao) {                         // Botão usado para continuar um bloco de história
@@ -32,6 +33,9 @@ function continuarStory(id, funcao) {                         // Botão usado pa
 
     var continuar = document.createElement("button");
     continuar.setAttribute("id", id);
+    continuar.setAttribute("class", "botaoStyle")
+    /*continuar.style.borderRadius = "5px";
+    continuar.style.*/
     continuar.innerText = "Continuar...";
     continuar. addEventListener("click", funcao);
     document.getElementById("buttons").appendChild(continuar);
@@ -128,6 +132,7 @@ function playAgain() {                                       //Cria um botão di
 
     var playAgain = document.createElement("button");
     playAgain.setAttribute("id", "playAgain");
+    playAgain.setAttribute("class", "botaoStyle");
     playAgain.innerText = "Jogar denovo!";
     playAgain.addEventListener("click", startGameImg)
     document.getElementById("buttons").appendChild(playAgain);
@@ -145,3 +150,13 @@ function music(){
         let divMusic = document.getElementById("divMusic")
         divMusic.appendChild(music);
 }
+
+/*function uglyButton(){
+    let botaoBonito = document.querySelectorAll("#btn");
+    /*botaoBonito.classList.remove("botaoStyle");
+
+    for(let i = 0; i < botaoBonito.length; i++){
+        botaoBonito[i].classList.remove("botaoStyle");
+        console.log(botaoBonito[i]);
+    }
+}/*
