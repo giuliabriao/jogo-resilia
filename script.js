@@ -159,4 +159,4 @@ function music(){
         botaoBonito[i].classList.remove("botaoStyle");
         console.log(botaoBonito[i]);
     }
-}/*
+}*/
